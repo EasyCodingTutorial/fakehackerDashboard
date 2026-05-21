@@ -1,0 +1,87 @@
+.ipTracker {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-glow);
+}
+
+.header {
+  background: var(--bg-tertiary);
+  padding: 8px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  background: var(--theme-primary);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 8px var(--theme-glow);
+}
+
+.content {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 11px;
+}
+
+.ipLine {
+  display: grid;
+  grid-template-columns: 120px 1fr 30px 80px;
+  gap: 12px;
+  padding: 8px;
+  margin-bottom: 4px;
+  border-left: 2px solid transparent;
+  animation: slideIn 0.3s ease-out;
+  transition: all 0.2s ease;
+}
+
+.ipLine:hover {
+  background: rgba(0, 255, 65, 0.05);
+}
+
+.ipLine.located {
+  border-left-color: var(--theme-primary);
+}
+
+.ipLine.lost {
+  border-left-color: #ff0055;
+  opacity: 0.6;
+}
+
+.ip {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-family: 'Fira Code', monospace;
+}
+
+.location {
+  color: var(--text-secondary);
+}
+
+.status {
+  color: var(--theme-primary);
+  text-align: center;
+  font-size: 14px;
+}
+
+.lost .status {
+  color: #ff0055;
+}
+
+.timestamp {
+  color: var(--text-muted);
+  font-size: 10px;
+  text-align: right;
+}

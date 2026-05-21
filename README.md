@@ -77,6 +77,41 @@
   - Canvas-based rendering for smooth performance
   - Glowing effects on nodes and connections
 
+- **🚨 Threat Monitor**
+  - Real-time threat detection simulation
+  - Severity levels (Low, Medium, High, Critical)
+  - Live threat statistics dashboard
+  - IP source tracking
+  - Multiple threat types (SQL Injection, DDoS, Malware, etc.)
+
+- **📦 Packet Sniffer**
+  - Live network packet capture simulation
+  - Protocol identification (TCP, UDP, HTTP, HTTPS, DNS, SSH, FTP)
+  - Source and destination IP tracking
+  - Packet size and flag monitoring
+  - Real-time packet counter
+
+- **🌐 IP Tracker**
+  - Geographic IP location tracking
+  - Real-time IP address monitoring
+  - Location mapping with city/country
+  - Success/failure status indicators
+  - Timestamp tracking
+
+- **🔌 Port Scanner**
+  - Automated port scanning simulation
+  - Common service detection (FTP, SSH, HTTP, MySQL, etc.)
+  - Port status (Open, Closed, Filtered)
+  - Progress bar with scanning animation
+  - Auto-restart scanning cycles
+
+- **🔐 Crypto Hash Generator**
+  - Multiple hashing algorithms (SHA-256, MD5, SHA-512, BLAKE2, SHA-1)
+  - Real-time hash generation
+  - Input/output display
+  - Processing status indicators
+  - Hash counter statistics
+
 - **🌧️ Matrix Rain Effect**
   - Background falling characters animation
   - Japanese katakana mixed with binary digits
@@ -220,6 +255,16 @@ components/
 ├── SystemStats.module.css
 ├── NetworkMap.tsx            # Animated network visualization
 ├── NetworkMap.module.css
+├── ThreatMonitor.tsx         # Security threat detection monitor
+├── ThreatMonitor.module.css
+├── PacketSniffer.tsx         # Network packet capture tool
+├── PacketSniffer.module.css
+├── IPTracker.tsx             # IP address geolocation tracker
+├── IPTracker.module.css
+├── PortScanner.tsx           # Port scanning utility
+├── PortScanner.module.css
+├── CryptoMonitor.tsx         # Cryptographic hash generator
+├── CryptoMonitor.module.css
 ├── MatrixRain.tsx            # Background matrix rain effect
 ├── MatrixRain.module.css
 ├── AccessOverlay.tsx         # Authentication overlay
@@ -281,6 +326,71 @@ Features:
 - Canvas rendering
 - Responsive sizing
 - Theme-aware colors
+
+#### ThreatMonitor Component
+```typescript
+// Security threat detection
+<ThreatMonitor />
+```
+
+Features:
+- Real-time threat alerts
+- Severity classification
+- Statistics dashboard
+- IP source tracking
+- Multiple threat types
+
+#### PacketSniffer Component
+```typescript
+// Network packet analysis
+<PacketSniffer />
+```
+
+Features:
+- Live packet capture
+- Protocol detection
+- IP address tracking
+- Packet statistics
+- Flag monitoring
+
+#### IPTracker Component
+```typescript
+// IP geolocation tracking
+<IPTracker />
+```
+
+Features:
+- Real-time IP monitoring
+- Geographic location display
+- Status indicators
+- Timestamp tracking
+- Success/failure states
+
+#### PortScanner Component
+```typescript
+// Port scanning utility
+<PortScanner />
+```
+
+Features:
+- Automated port scanning
+- Service identification
+- Status detection (Open/Closed/Filtered)
+- Progress tracking
+- Auto-restart cycles
+
+#### CryptoMonitor Component
+```typescript
+// Cryptographic hash generation
+<CryptoMonitor />
+```
+
+Features:
+- Multiple hash algorithms
+- Real-time generation
+- Input/output display
+- Processing animations
+- Hash statistics
 
 ---
 
