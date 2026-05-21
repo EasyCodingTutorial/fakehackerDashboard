@@ -1,0 +1,172 @@
+.toggleButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-glow);
+}
+
+.toggleButton:hover {
+  background: var(--bg-tertiary);
+  transform: rotate(90deg);
+  box-shadow: 0 0 20px var(--theme-glow);
+}
+
+.icon {
+  animation: pulse 2s infinite;
+}
+
+.controls {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  background: var(--bg-secondary);
+  border-left: 2px solid var(--border-color);
+  z-index: 999;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.controls.open {
+  right: 0;
+}
+
+.header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  color: #ff0055;
+}
+
+.section {
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.label {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.themeButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.themeButton {
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.themeButton::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--theme-color);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.themeButton:hover::before,
+.themeButton.active::before {
+  opacity: 1;
+}
+
+.themeButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--theme-color);
+  color: var(--theme-color);
+}
+
+.themeButton.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--theme-color);
+  color: var(--theme-color);
+  box-shadow: 0 0 10px var(--theme-color);
+}
+
+.optionButton {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.optionButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--theme-primary);
+  color: var(--theme-primary);
+}
+
+.optionButton.active {
+  border-color: var(--theme-primary);
+  color: var(--theme-primary);
+  box-shadow: 0 0 10px var(--theme-glow);
+}
+
+.optionButton span {
+  font-size: 16px;
+}
